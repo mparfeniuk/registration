@@ -1,4 +1,5 @@
 <?PHP
+  sleep(3);
 
   if($_POST && isset($_POST['lk-email'])) {
 
