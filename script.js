@@ -39,7 +39,7 @@ LK.registration = (function ($) {
 
     function notifier(id, type, msg) {
         $(id).html("<span class='" + type + "'>" + msg + "</span>");
-    }
+    };
 
     function submitForm() {
         if (passwordMatch) {
@@ -84,7 +84,7 @@ LK.registration = (function ($) {
 
     return {
         init: init
-    }
+    };
 
 })(jQuery);
 
