@@ -200,3 +200,8 @@ input:focus
     margin-right: 5px;
 }
 
+.error
+{
+    color: #e8503c;
+}
+
