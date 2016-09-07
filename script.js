@@ -5,6 +5,7 @@ LK.registration = (function ($) {
         $birthdayField = $rgForm.find('#lk-birthday'),
         $passwordField = $rgForm.find('#lk-password'),
         $confirmPasswordField = $rgForm.find('#lk-confirm-password'),
+        $msgContainer = $('.lk-msg-container'),
         $submitBtn = $rgForm.find('#lk-contact-submit'),
         passwordMatch = false;
 
@@ -53,8 +54,20 @@ LK.registration = (function ($) {
             type: "POST",
             url: "process.php",
             data: form.serialize(),
+            beforeSend: function () {
+                $submitBtn.addClass('loading').attr('disabled', true);
+            },
             success: function (data) {
-                console.log(data)
+                $rgForm.remove();
+                $msgContainer.html("<h1 style='padding:50px 20px'>" + data + "</h1>");
+            },
+            error: function (xhr) {
+                console.log(xhr.statusTex)
+                console.log(xhr.responseText)
+                $submitBtn.removeAttr('disabled').removeClass('loading');
+            },
+            complete: function () {
+                $submitBtn.removeAttr('disabled').removeClass('loading');
             }
         });
     };

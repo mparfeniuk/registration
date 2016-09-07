@@ -145,6 +145,23 @@ label
     background-color: #64c7c7;
 }
 
+#lk-registration-form #lk-contact-submit.loading
+{
+    cursor: wait;
+}
+
+#lk-registration-form #lk-contact-submit.loading > .title
+{
+    visibility: hidden;
+}
+
+#lk-registration-form #lk-contact-submit.loading
+{
+    background-image: url('img/spinner.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 input:focus
 {
     margin: 3px 1px 3px 0;
@@ -153,6 +170,23 @@ input:focus
     border: 1px solid rgb(131, 131, 131);
     outline: 0;
     box-shadow: 0 0 3px rgb(131, 131, 131);
+}
+
+.ui-datepicker td a
+{
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.ui-widget-content .ui-state-active
+{
+    border-color: #509e9e;
+}
+
+.ui-datepicker select.ui-datepicker-month
+{
+    margin-right: 5px;
 }
 
 ::-webkit-input-placeholder
@@ -181,23 +215,6 @@ input:focus
     height: 0;
 
     content: '.';
-}
-
-.ui-datepicker td a
-{
-    line-height: 1.5;
-
-    text-align: center;
-}
-
-.ui-widget-content .ui-state-active
-{
-    border-color: #509e9e;
-}
-
-.ui-datepicker select.ui-datepicker-month
-{
-    margin-right: 5px;
 }
 
 .error
