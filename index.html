@@ -15,7 +15,31 @@
     <h1>Registration Exercise</h1>
 </header>
 <section class="lk-container">
-    CONTAINER WITH A REGISTRATION FORM
+    <form id="lk-registration-form" action="" method="post">
+        <fieldset>
+            <label for="lk-email">Email</label>
+            <input placeholder="example@example.com" type="email" id="lk-email" name="lk-email" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="lk-birthday">Birthday</label>
+            <input placeholder="dd/mm/yyyy" type="text" id="lk-birthday" name="lk-birthday" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="lk-password">Password</label>
+            <input type="password" id="lk-password" name="lk-password" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="lk-confirm-password">Confirm Password</label>
+            <input type="password" id="lk-confirm-password" name="lk-confirm-password" required>
+        </fieldset>
+
+        <button type="submit" id="lk-contact-submit">
+            <span class="title">Register</span>
+        </button>
+    </form>
 </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js" integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo="   crossorigin="anonymous"></script>

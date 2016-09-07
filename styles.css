@@ -76,3 +76,111 @@ header #lk-logo .lk-logo-sm
     }
 }
 
+.lk-container
+{
+    position: relative;
+
+    width: 100%;
+
+    background: #fff;
+}
+
+
+#lk-registration-form
+{
+    padding: 10px 20px;
+}
+
+fieldset
+{
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+
+    border: none !important;
+}
+
+label
+{
+    font-weight: bold;
+
+    float: left;
+
+    min-width: 120px;
+}
+
+@media only screen and (max-width: 768px)
+{
+    label
+    {
+        line-height: 1;
+
+        min-width: 100%;
+        margin-top: 10px;
+    }
+}
+
+#lk-registration-form input
+{
+    width: 200px;
+    margin: 0 0 5px;
+    padding: 3px 3px;
+
+    border: 1px solid #d8d8d8;
+    background: #fff;
+}
+
+#lk-registration-form #lk-contact-submit
+{
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-top: 15px;
+    padding: 5px 13px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border: none;
+    background-color: #64c7c7;
+}
+
+input:focus
+{
+    margin: 3px 1px 3px 0;
+    padding: 3px 0 3px 3px;
+
+    border: 1px solid rgb(131, 131, 131);
+    outline: 0;
+    box-shadow: 0 0 3px rgb(131, 131, 131);
+}
+
+::-webkit-input-placeholder
+{
+    color: #888;
+}
+:-moz-placeholder
+{
+    color: #888;
+}
+::-moz-placeholder
+{
+    color: #888;
+}
+:-ms-input-placeholder
+{
+    color: #888;
+}
+
+.clearfix:after
+{
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '.';
+}
+
+
