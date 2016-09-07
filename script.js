@@ -42,14 +42,21 @@ LK.registration = (function ($) {
 
     function submitForm() {
         if (passwordMatch) {
-            console.log("Send request")
+            sendRequest($rgForm);
         } else {
             notifier(".lk-confirm-password-msg", "error", "Passwords don't match.")
         }
     };
 
-    function sendRequest() {
-        // All magic with ajax request
+    function sendRequest(form) {
+        $.ajax({
+            type: "POST",
+            url: "process.php",
+            data: form.serialize(),
+            success: function (data) {
+                console.log(data)
+            }
+        });
     };
 
     function initDatePicker(inputObj) {
