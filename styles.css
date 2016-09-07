@@ -1,0 +1,20 @@
+/*
+	Theme Name: Registration form
+	Date: September 2016
+	Description: Registration form for 'Loveknilling'
+	Version: 1.0
+	Author: Maksim Parfeniuk
+*/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
