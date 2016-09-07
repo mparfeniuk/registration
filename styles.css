@@ -183,4 +183,20 @@ input:focus
     content: '.';
 }
 
+.ui-datepicker td a
+{
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.ui-widget-content .ui-state-active
+{
+    border-color: #509e9e;
+}
+
+.ui-datepicker select.ui-datepicker-month
+{
+    margin-right: 5px;
+}
 

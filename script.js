@@ -1,9 +1,16 @@
 var LK = {};
 
 LK.registration = (function ($) {
+    var $rgForm = $('#lk-registration-form'),
+        $birthdayField = $rgForm.find('#lk-birthday'),
+        $passwordField = $rgForm.find('#lk-password'),
+        $confirmPasswordField = $rgForm.find('#lk-confirm-password'),
+        $submitBtn = $rgForm.find('#lk-contact-submit');
 
     function init() {
-        // Global init
+        if (!$rgForm) return;
+
+        initDatePicker($birthdayField);
     };
 
     function checkPasswordMatch() {
@@ -18,6 +25,16 @@ LK.registration = (function ($) {
         // All magic with ajax request
     };
 
+    function initDatePicker(inputObj) {
+        inputObj.datepicker({
+            changeMonth: true,
+            changeYear: true,
+            maxDate: new Date(2009, 1 - 1, 31),
+            minDate: new Date(1900, 1 - 1, 1),
+            yearRange: "1900:2009"
+        });
+    };
+
     return {
         init: init
     }
@@ -27,6 +44,6 @@ LK.registration = (function ($) {
 
 $(document).ready(function () {
 
-    // Initialization
+    LK.registration.init();
 
 });
