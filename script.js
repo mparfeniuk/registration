@@ -2,6 +2,7 @@ var LK = {};
 
 LK.registration = (function ($) {
     var $rgForm = $('#lk-registration-form'),
+        $email = $('#lk-email'),
         $birthdayField = $rgForm.find('#lk-birthday'),
         $passwordField = $rgForm.find('#lk-password'),
         $confirmPasswordField = $rgForm.find('#lk-confirm-password'),
@@ -53,7 +54,7 @@ LK.registration = (function ($) {
         $.ajax({
             type: "POST",
             url: "process.php",
-            data: form.serialize(),
+            data: { email : $email.val() },
             beforeSend: function () {
                 $submitBtn.addClass('loading').attr('disabled', true);
             },
